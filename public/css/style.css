@@ -1,0 +1,81 @@
+/*================================================================================
+	Item Name: Robust - Responsive Admin Theme
+	Version: 1.0
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+================================================================================
+
+NOTE:
+------
+PLACE HERE YOUR OWN SCSS CODES AND IF NEEDED, OVERRIDE THE STYLES FROM THE OTHER STYLESHEETS.
+WE WILL RELEASE FUTURE UPDATES SO IN ORDER TO NOT OVERWRITE YOUR STYLES IT'S BETTER LIKE THIS.  */
+label.error{color:red !important;}
+input.error {
+    border: 1px dashed red;
+    font-weight: 300;
+    color: red;
+}
+
+table.dataTable thead .sorting:before, table.dataTable thead .sorting:after, 
+table.dataTable thead .sorting_asc:before, table.dataTable thead .sorting_asc:after, 
+table.dataTable thead .sorting_desc:before, table.dataTable thead .sorting_desc:after, 
+table.dataTable thead .sorting_asc_disabled:before, table.dataTable thead .sorting_asc_disabled:after, 
+table.dataTable thead .sorting_desc_disabled:before, table.dataTable thead .sorting_desc_disabled:after {
+    position: absolute;
+    bottom: 10px;
+    display: block;
+    opacity: 1;
+}
+
+div.dataTables_wrapper div.dataTables_paginate ul.pagination {
+    /* margin: 0; */
+    white-space: nowrap;
+    justify-content: flex-end;
+}
+
+tfoot tr, thead tr{background: #1D2B36; color:#fff;}
+tbody tr th, tfoot tr th, thead tr th{padding: 10px;font-size: 14px; font-weight: normal;}
+thead tr th:last-child, tbody tr td:last-child {text-align: right;}
+
+.dataTable tbody tr:nth-child(even) {background: #f6f6f6}
+.dataTable tbody tr:nth-child(odd) {background: #FFF}
+
+.dataTable tbody tr td{padding: 10px;}
+
+.min-height{min-height: 600px;}
+
+.bootbox-confirm, .bootbox-alert{top: 20%;}
+
+.right-align{text-align: right;}
+
+.dropdown-item{width: auto;}
+
+.question-type{border-bottom: 1px solid #cecece;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    font-weight: bold;}
+
+.question-type-option{
+    border: solid 1px #cecece;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.question-choice-option-group{margin-top: 15px;}
+
+.m-b-20{margin-bottom: 20px;}
+.m-t-20{margin-top: 20px;}
+
+.question-container:nth-child(even){background: #fff; border-bottom: solid 1px; border-top: solid 1px; padding: 15px 0 0 0;}
+.question-container:nth-child(odd){background: #f6f4f4; padding: 15px 0 0 0;}
+
+.add-pointer{cursor: pointer;color : #37BC9B; font-weight:bold;}
+.delete-pointer{cursor: pointer;color:red; font-weight:bold;}
+.t-a-c{text-align: center;}
+
+.option-container:nth-child(even){border: dotted 0px #cecece; padding: 10px 0;}
+.option-container:nth-child(odd){border: dotted 0px #cecece; padding: 10px 0;}
+
+div.modal-xl{max-width: 85%;}
+
+.modal-vue-questionbank{height: 550px; overflow-y: auto;}

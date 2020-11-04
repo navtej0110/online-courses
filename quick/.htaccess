@@ -1,0 +1,79 @@
+# BEGIN LSCACHE
+# END LSCACHE
+# BEGIN NON_LSCACHE
+# END NON_LSCACHE
+# TN Expires Caching Start #
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType text/css "access 1 month"
+ExpiresByType text/html "access 1 month"
+ExpiresByType image/gif "access 1 year"
+ExpiresByType image/png "access 1 year"
+ExpiresByType image/jpg "access 1 year"
+ExpiresByType image/jpeg "access 1 year"
+ExpiresByType image/x-icon "access 1 year"
+ExpiresByType application/pdf "access 1 month"
+ExpiresByType application/javascript "access 1 month"
+ExpiresByType text/x-javascript "access 1 month"
+ExpiresByType application/x-shockwave-flash "access 1 month"
+ExpiresDefault "access 1 month"
+</IfModule>
+# TN Expires Caching End #
+# BEGIN GD-SSL
+<IfModule mod_rewrite.c>
+Options +FollowSymLinks
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP_USER_AGENT} ^(.+)$
+RewriteCond %{SERVER_NAME} ^www\.quicstick\.com$
+RewriteRule .* https://%{SERVER_NAME}%{REQUEST_URI} [R=301,L]
+Header add Strict-Transport-Security "max-age=300"
+</IfModule>
+# END GD-SSL
+# BEGIN WordPress
+# The directives (lines) between `BEGIN WordPress` and `END WordPress` are
+# dynamically generated, and should only be modified via WordPress filters.
+# Any changes to the directives between these markers will be overwritten.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+# END WordPress
+# BEGIN WP Performance Score Booster Settings
+# END WP Performance Score Booster Settings
+<IfModule mod_expires.c>
+ExpiresActive On
+# Images
+ExpiresByType image/jpeg "access plus 1 year"
+ExpiresByType image/gif "access plus 1 year"
+ExpiresByType image/png "access plus 1 year"
+ExpiresByType image/webp "access plus 1 year"
+ExpiresByType image/svg+xml "access plus 1 year"
+ExpiresByType image/x-icon "access plus 1 year"
+# Video
+ExpiresByType video/mp4 "access plus 1 year"
+ExpiresByType video/mpeg "access plus 1 year"
+# CSS, JavaScript
+ExpiresByType text/css "access plus 1 month"
+ExpiresByType text/javascript "access plus 1 month"
+ExpiresByType application/javascript "access plus 1 month"
+# Others
+ExpiresByType application/pdf "access plus 1 month"
+ExpiresByType application/x-shockwave-flash "access plus 1 month"
+</IfModule>
+
